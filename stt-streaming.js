@@ -6,9 +6,6 @@ const speech = require('@google-cloud/speech');
 // Creates a client
 const client = new speech.SpeechClient();
 
-/**
- * TODO(developer): Uncomment the following lines before running the sample.
- */
 const encoding = 'LINEAR16';
 const sampleRateHertz = 16000;
 const languageCode = 'en-US';
@@ -39,7 +36,6 @@ record
   .start({
     sampleRateHertz: sampleRateHertz,
     threshold: 0,
-    // Other options, see https://www.npmjs.com/package/node-record-lpcm16#options
     verbose: false,
     recordProgram: 'rec', // Try also "arecord" or "sox"
     silence: '10.0',
